@@ -1,0 +1,15 @@
+name: sst2_synonym
+dataset_name: "glue"
+dataset_config: "sst2"
+text_column: "sentence"
+num_labels: 2
+
+# Augmentation settings
+pct_words_to_swap: 0.15
+
+# Training settings
+epochs: 3
+batch_size: 32
+learning_rate: 5e-5
+logging_steps: 50
+max_length: 128

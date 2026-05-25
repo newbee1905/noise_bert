@@ -1,0 +1,8 @@
+defaults:
+  - models: denoising_robust
+  - tasks: sst2_textbugger
+  - _self_
+
+# Global settings
+seed: 42
+output_dir: "./outputs/${models.name}_${tasks.name}"

@@ -1,0 +1,17 @@
+name: sst2_textbugger
+dataset_name: "glue"
+dataset_config: "sst2"
+text_columns: ["sentence"]
+num_labels: 2
+
+# Augmentation settings
+pct_words_to_swap: 0.3
+augmentation_type: "all" # options: "all", "char_swap", "leetspeak", "punctuation"
+
+# Training settings
+epochs: 3
+batch_size: 32
+learning_rate: 5e-5
+logging_steps: 50
+max_length: 128
+max_typos: 15

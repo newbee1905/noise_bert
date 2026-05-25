@@ -1,0 +1,6 @@
+name: fwp_baseline
+base_model: "bert-base-uncased"
+ssl_method: "fwp"
+projector_dim: "768" # Not used, but required by schema
+ema_momentum: 0.0 # Not used
+classification_mode: "augmented_only" # FWP trains only on the augmented view (AdvDA)

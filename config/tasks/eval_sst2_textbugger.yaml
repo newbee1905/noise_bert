@@ -1,0 +1,20 @@
+name: eval_sst2_textbugger
+dataset_name: "glue"
+dataset_config: "sst2"
+text_columns: ["sentence"]
+num_labels: 2
+
+# Evaluation settings
+model_paths: 
+  - "textattack/bert-base-uncased-SST-2"
+  - "./outputs/denoising_ema/final"
+  - "./outputs/denoising_sigreg/final"
+  - "./outputs/sst2_jepa_both/final"
+  - "./outputs/sst2_sigreg_both/final"
+attacks: 
+  - "pruthi"
+  - "gao"
+  - "custom"
+num_examples: 100
+use_defense: false
+use_predictor: true

@@ -1,0 +1,16 @@
+name: qnli_textbugger
+dataset_name: "glue"
+dataset_config: "qnli"
+text_columns: ["question", "sentence"]
+num_labels: 2
+
+# Augmentation settings
+pct_words_to_swap: 0.15
+
+# Training settings
+epochs: 3
+batch_size: 16 # QNLI is larger and longer, reducing batch size for stability
+learning_rate: 2e-5
+logging_steps: 100
+max_length: 128
+max_typos: 15

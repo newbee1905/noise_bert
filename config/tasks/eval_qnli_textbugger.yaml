@@ -1,0 +1,14 @@
+name: eval_qnli_textbugger
+dataset_name: "glue"
+dataset_config: "qnli"
+text_columns: ["question", "sentence"]
+num_labels: 2
+
+# Evaluation settings
+model_paths: 
+  - "./outputs/denoising_ema_qnli/final"
+attacks: 
+  - "pruthi"
+  - "gao"
+num_examples: 100
+use_defense: false

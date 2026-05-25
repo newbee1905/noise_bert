@@ -1,0 +1,6 @@
+name: denoising_robust
+base_model: "bert-base-uncased"
+ssl_method: "jepa" # Will be overridden in task or command line
+projector_dim: "768-1536-128"
+ema_momentum: 0.99
+classification_mode: "clean_only"

@@ -1,0 +1,5 @@
+name: jepa_synonym
+base_model: "bert-base-uncased"
+projector_dim: "768-1536-768"
+predictor_dim: 768
+ema_momentum: 0.99
